@@ -5,36 +5,36 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class IntelligenceTest {
+class StatTest {
 
     int value = 10;
-    Intelligence intl;
+    Stat stat;
 
     @BeforeEach
     void setUp() {
-        intl = new Intelligence(value);
+        stat = new StatMock(value);
     }
 
     @Test
     void Constructor_getValue_Value() {
-        assertEquals(value, intl.getValue());
+        assertEquals(value, stat.getValue());
     }
 
     @Test
     void IValue_Increase_ValueIncrease1() {
-        intl.increase();
-        assertEquals(value+1, intl.getValue());
+        stat.increase();
+        assertEquals(value+1, stat.getValue());
     }
 
     @Test
     void decrease() {
-        intl.decrease();
-        assertEquals(value-1, intl.getValue());
+        stat.decrease();
+        assertEquals(value-1, stat.getValue());
     }
 
     @Test
     void testToString() {
         String expected = "Intelligence: 10";
-        assertEquals(expected, intl.toString());
+        assertEquals(expected, stat.toString());
     }
 }

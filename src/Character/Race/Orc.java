@@ -5,7 +5,7 @@ import Character.Stat.Intelligence;
 import Character.Stat.Stat;
 import Character.Stat.Strength;
 
-public class Orc extends  Race{
+public class Orc extends Race{
     @Override
     public int modifier(Stat stat) {
         if(stat instanceof Strength) {
