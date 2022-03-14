@@ -10,6 +10,7 @@ public abstract class Race {
     @Override
     //Devuelve true si son la misma clase
     public boolean equals(Object obj){
+
         return false;
     }
 
