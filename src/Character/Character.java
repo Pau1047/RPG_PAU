@@ -9,6 +9,7 @@ import Character.Stat.Strength;
 
 public class Character implements IDamage{
 
+    private int damageRecived;
     private String name;
     private Race race;
     private Job job;
@@ -72,12 +73,16 @@ public class Character implements IDamage{
 
     @Override
     public double health() {
-        return 0;
+        return maxHealth() - damageRecived;
     }
 
     @Override
     public boolean isDead() {
-        return false;
+        if (health() < 0){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
