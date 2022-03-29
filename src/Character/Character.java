@@ -95,4 +95,3 @@ public class Character implements IDamage{
 
     }
 }
-
