@@ -9,15 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DiamondArmorTest {
 
-    Archer archer1;
+    DiamondArmor diamondArmor;
 
     @BeforeEach
     void setUp() {
-        archer1 = new Archer();
+         diamondArmor = new DiamondArmor();
     }
 
     @Test
-    void getConstitution_ConstitutiomModifier_ConstitutionLess2() {
-        assertEquals(-2, archer1.modifier(new Constitution(0)));
+    void getConstitution_ConstitutiomModifier_Constitution12() {
+        assertEquals(12, diamondArmor.modifier(new Constitution(0)));
     }
 }
